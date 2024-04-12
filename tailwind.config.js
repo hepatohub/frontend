@@ -12,7 +12,9 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "bgHome":"url('/bghomepage.png')",
         "bgHeader":"url('/bgHeader.svg')",
-        "bgCards":"url('/bgCards.png')"
+        "bgCards":"url('/bgCards.png')",
+        "bgFooter":"url('/bgFooter.png')",
+        "bgSecCards":"url('/bgSecCards.png')"
       },
       backgroundColor: {
         "bg-homepage": "rgba(179, 194, 216, 0.42)",
@@ -20,7 +22,9 @@ module.exports = {
       },
       colors: {
         "spam-color": "#90332d",
-        "h1-color":"#217196"
+        "h1-color":"#217196",
+        "footer":"#237499",
+        "cards": "#cad4da"
       },
       fontSize:{
         "40px":"40px"
