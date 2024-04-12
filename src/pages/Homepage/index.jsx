@@ -4,6 +4,7 @@ import Cards from '@/components/Cards';
 import cardsData from '@/data/cardsData';
 import React from 'react';
 import Image from "next/image";
+import Footer from '@/components/Footer';
 
 const Homepage = () => {
   
@@ -41,20 +42,19 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <main className="grid grid-cols-2 md:grid-cols-4 gap-4 p-8"> {/* Usando grid-cols-2 para telas menores e grid-cols-4 para telas maiores */}
+      <main className=" flex bg-bgSecCards bg-no-repeat bg-cover  py-10 justify-around">
         {cardsData.map((card) => (
-          <Cards
-            key={card.id}
-            imageUrl={card.imageUrl}
-            title={card.title}
-            description={card.description}
-          />
+          <div key={card.id} className=" mb-8">
+            <Cards
+              imageUrl={card.imageUrl}
+              title={card.title}
+              description={card.description}
+            />
+          </div>
         ))}
-
-
-       
-
       </main>
+     
+    <Footer />
     </>
   );
 };
