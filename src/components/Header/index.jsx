@@ -11,6 +11,7 @@ const Header = () => {
           </div>
           <nav className="hidden md:flex flex-grow justify-center">
             <a href="#" className="text-white hover:text-gray-200 px-4 py-2">Página Inicial</a>
+            <a href="/hepatohub" className="text-white hover:text-gray-200 px-4 py-2">Hepato Hub</a>
             <a href="#" className="text-white hover:text-gray-200 px-4 py-2">Auto Cuidado</a>
             <a href="#" className="text-white hover:text-gray-200 px-4 py-2">Medicamentos</a>
             <a href="#" className="text-white hover:text-gray-200 px-4 py-2">Conheça a Equipe</a>

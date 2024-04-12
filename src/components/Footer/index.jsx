@@ -17,6 +17,7 @@ const Footer = () => {
           <h2 className="text-lg font-bold mb-4">Categoria</h2>
           <ul>
             <li><a href="#" className="text-base block hover:text-gray-400 mb-8">Página Inicial</a></li>
+            <li><a href="/hepatohub" className="text-base block hover:text-gray-400 mb-8">Hepato Hub</a></li>
             <li><a href="#" className="text-base block hover:text-gray-400 mb-8">Auto Cuidado</a></li>
             <li><a href="#" className="text-base block hover:text-gray-400 mb-8">Medicamentos</a></li>
             <li><a href="#" className="text-base block hover:text-gray-400 mb-8">Conheça a Equipe</a></li>
