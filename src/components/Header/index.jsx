@@ -17,7 +17,7 @@ const Header = () => {
             <Link href="/hepatohub">
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Hepato Hub</p>
             </Link>
-            <Link href="/auto-cuidado">
+            <Link href="/autocuidado">
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Auto Cuidado</p>
             </Link>
             <Link href="/medicamentos">
