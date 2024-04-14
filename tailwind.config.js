@@ -17,6 +17,7 @@ module.exports = {
         "bgSecCards":"url('/bgSecCards.png')",
         "bgHepatohub":"url('/hepato.png')",
         "bgSechepato":"url('/bgSechepato.png')",
+        "bgauto":"url('/bgauto.png')",
       },
       backgroundColor: {
         "bg-homepage": "rgba(179, 194, 216, 0.42)",

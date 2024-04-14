@@ -5,6 +5,7 @@ const page = () => {
   return (
     <>
     <Header />
+    <section className='bg-bgauto bg-no-repeat bg-cover w-full h-[963px]'></section>
     </>
   )
 }
