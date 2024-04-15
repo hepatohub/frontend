@@ -1,12 +1,14 @@
+"use client";
 import React from "react";
 
 const LoginForm = ({ onLogin, onRegister }) => {
   // Verificar se estamos no lado do cliente
-  const isClient = typeof window !== 'undefined';
+  // const isClient = typeof window !== 'undefined';
 
-  if (!isClient) {
-    return null; // Se não estiver no lado do cliente, não renderizar nada
-  }
+  // if (!isClient) {
+  //   return null;
+  //    // Se não estiver no lado do cliente, não renderizar nada
+  // }
 
   // Se estiver no lado do cliente, importar e usar useState
   const [email, setEmail] = React.useState("");
