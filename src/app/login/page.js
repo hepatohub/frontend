@@ -1,5 +1,9 @@
+"use client";
+import Button from '@/components/Button';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import LoginForm from '@/components/LoginForm';
+
 
 import React from 'react'
 // import { GoogleLogin } from 'react-google-login';
@@ -19,7 +23,12 @@ const login = () => {
     <div>
       <Header />
      
+    
+      <Button  text="testando"/>
+
       <LoginForm />
+
+      <Button />
   
       {/* <GoogleLogin
         clientId="SEU_CLIENT_ID_DO_GOOGLE"
@@ -29,8 +38,9 @@ const login = () => {
         cookiePolicy={'single_host_origin'}
       /> */}
       {/* <ReCAPTCHA sitekey="SEU_SITE_KEY_DO_RECAPTCHA" /> */}
+      <Footer />
     </div>
   );
 };
 
-export default login
+export default login;
