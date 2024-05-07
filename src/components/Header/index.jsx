@@ -20,13 +20,13 @@ const Header = () => {
             <Link href="/autocuidado">
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Auto Cuidado</p>
             </Link>
-            <Link href="/medicamentos">
+            <Link href="/construcao">
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Medicamentos</p>
             </Link>
-            <Link href="/equipe">
+            <Link href="/construcao">
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Conheça a Equipe</p>
             </Link>
-            <Link href="/colabore">
+            <Link href="/construcao">
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Colabore</p>
             </Link>
           </nav>
