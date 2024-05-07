@@ -27,6 +27,7 @@ module.exports = {
         "button-bg":"linear-gradient(227deg, #36B4E1 25.17%, #164B6D 73.99%);",
         "hepatodivs":"rgba(54, 180, 225, 0.11)",
         "buttons":"linear-gradient(227deg, #164B6D 25.17%, #36B4E1 73.99%, #36B4E1 74%)",
+        "construcao":"rgba(255, 255, 255, 0.92);"
 
       },
       colors: {
@@ -39,6 +40,8 @@ module.exports = {
         "login":"#36b4e1f0",
         "button-login":"#0A3047",
         "button":"#2A87B5",
+        "roxo":"#49237F",
+        "fushia":"#d946ef"
       },
       fontSize:{
         "40px":"40px"
