@@ -15,7 +15,7 @@ const Header = () => {
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Página Inicial</p>
             </Link>
             <Link href="/hepatohub">
-              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Hepato Hub</p>
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Sobre</p>
             </Link>
             <Link href="/autocuidado">
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Auto Cuidado</p>

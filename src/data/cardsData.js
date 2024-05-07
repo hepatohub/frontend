@@ -13,7 +13,7 @@ const cardsData = [
   },
   {
     id: 3,
-    imageUrl: '/hepato.png',
+    imageUrl: '/figado.png',
     title: 'HEPATO HUB',
     description: 'Comunidade online para compartilhar experiências, obter apoio e aprender com outros pacientes e profissionais da saúde.',
   },
