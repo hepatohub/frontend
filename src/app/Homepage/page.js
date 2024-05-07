@@ -21,9 +21,9 @@ const Homepage = () => {
         </div>
         <div className='  '>
         
-        <div className='xl:container flex flex-row gap-[200px]'>
-          <div className="w-400 h-208 " >
-            <h1 className="text-h1-color text-lg/[46px] font-extrabold py-10">
+        <div className=' xl:container flex flex-row gap-[200px]'>
+          <div className="sm:text-center sm:ml-3 w-400 h-208 " >
+            <h1 className=" text-h1-color text-lg/[46px] font-extrabold py-10">
               <span className="text-spam-color text-4xl font-extrabold"> PORTAL HEPÁTICO</span> <br />
               Cuidando do seu <span className="text-spam-color font-extrabold">Fígado</span> <br />
               Cuidando de <span className="text-spam-color">Você</span>

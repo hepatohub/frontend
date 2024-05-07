@@ -18,11 +18,16 @@ module.exports = {
         "bgHepatohub":"url('/hepato.png')",
         "bgSechepato":"url('/bgSechepato.png')",
         "bgauto":"url('/bgauto.png')",
+        "bgLogin":"url('/bgLogin.png')",
+        "login2":"url('/login.png')",
       },
+
       backgroundColor: {
         "bg-homepage": "rgba(179, 194, 216, 0.42)",
         "button-bg":"linear-gradient(227deg, #36B4E1 25.17%, #164B6D 73.99%);",
-        "hepatodivs":"rgba(54, 180, 225, 0.11)"
+        "hepatodivs":"rgba(54, 180, 225, 0.11)",
+        "buttons":"linear-gradient(227deg, #164B6D 25.17%, #36B4E1 73.99%, #36B4E1 74%)",
+
       },
       colors: {
         "spam-color": "#90332d",
@@ -31,6 +36,9 @@ module.exports = {
         "cards": "#cad4da",
         "hepato-blue":"#164B6D",
         "title-color":"#174F73",
+        "login":"#36b4e1f0",
+        "button-login":"#0A3047",
+        "button":"#2A87B5",
       },
       fontSize:{
         "40px":"40px"
