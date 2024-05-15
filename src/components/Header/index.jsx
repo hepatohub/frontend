@@ -8,7 +8,6 @@ const Header = () => {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
   const [originalContent, setOriginalContent] = useState('');
 
-  // Salva o conteúdo original da página quando o componente é montado
   useEffect(() => {
     setOriginalContent(document.documentElement.innerHTML);
   }, []);
@@ -18,8 +17,12 @@ const Header = () => {
     const elements = document.querySelectorAll("*:not(script):not(style)");
     elements.forEach(element => {
       const regex = new RegExp(`(${searchTerm})`, 'gi');
-      element.innerHTML = element.textContent.replace(regex, '<span class="highlight">$1</span>');
+      const html = element.innerHTML;
+      element.innerHTML = html.replace(regex, '<span class="highlight">$1</span>');
+      element.classList.add('search-result');
+     
     });
+   
   };
 
   const handleChange = (e) => {
@@ -74,15 +77,6 @@ const Header = () => {
                   </button>
                 </div>
               </div>
-              {searchTerm && (
-                <button
-                  type="button"
-                  className="ml-2 text-gray-500 hover:text-gray-800 focus:outline-none"
-                  onClick={handleReset}
-                >
-                  Limpar
-                </button>
-              )}
             </form>
           </div>
         </div>
