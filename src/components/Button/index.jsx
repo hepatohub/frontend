@@ -10,7 +10,10 @@ const Button = ({ href, children, text }) => {
     color: "#FFFFFF",
     textDecoration: "none", // Remover decoração de texto para o link
     cursor: "pointer", // Alterar o cursor para indicar que é clicável
-    display: "inline-block" // Definir para que o botão se comporte como um link
+    display: "inline-block", // Definir para que o botão se comporte como um link
+    // Adições para acessibilidade
+    role: "button", // Indicar que o div funciona como um botão
+    tabIndex: 0 // Tornar o botão focável por meio da navegação com a tecla Tab
   };
 
   // Verificar se href está definido antes de renderizar o Link

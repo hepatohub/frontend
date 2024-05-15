@@ -11,6 +11,9 @@ import Footer from "@/components/Footer";
 import Login from "../login/page";
 
 const Homepage = () => {
+
+  
+
   return (
     <>
       <SearchProvider>
