@@ -12,5 +12,14 @@ body {
   background-color: yellow;
 }
 
+.mobileMenu {
+  /* Estilos base do menu para mobile */
+  display: none; /* Oculta por padrão */
+}
+
+.mobileMenu.open {
+  display: block; /* Mostra quando o menu estiver aberto */
+  /* Adicione aqui os estilos de fundo para os links */
+}
 
 

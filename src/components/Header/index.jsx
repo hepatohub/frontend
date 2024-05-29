@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SearchContext } from '@/contexts/SearchContext';
@@ -7,13 +7,8 @@ import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
-  const [originalContent, setOriginalContent] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 768 }); // Adapte o valor conforme necessário
-
-  useEffect(() => {
-    setOriginalContent(document.documentElement.innerHTML);
-  }, []);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,7 +16,7 @@ const Header = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Implemente a lógica de pesquisa aqui
+    // Implementar lógica de pesquisa aqui
   };
 
   const handleChange = (e) => {
@@ -35,8 +30,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Image src="/logoHeader.png" alt="Logo" width={99} height={76} priority={true} />
           </div>
-          <nav className={`hidden md:flex flex-grow justify-center space-x-11 ${isMenuOpen || isMobile ? 'block' : 'hidden'}`}>
-
+          <nav className={`flex-grow justify-center space-x-11 ${isMobile ? 'hidden' : 'flex'} md:flex`}>
             <Link href="/">
               <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Página Inicial</p>
             </Link>
@@ -57,19 +51,8 @@ const Header = () => {
             </Link>
           </nav>
           <div className="ml-auto flex-shrink-0 relative">
-            <div className="md:hidden flex items-center">
-              <button onClick={toggleMenu} className="text-white focus:outline-none">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        {(!isMenuOpen || isMobile) && (
-          <div className="hidden md:block">
-            <div className="ml-auto flex-shrink-0 relative" style={{ marginRight: '20px' }}>
-              <form onSubmit={handleSearch}>
+            <div className="hidden md:flex items-center">
+              <form onSubmit={handleSearch} className="relative">
                 <input 
                   type="text" 
                   placeholder="Pesquisar..." 
@@ -86,6 +69,51 @@ const Header = () => {
                 </div>
               </form>
             </div>
+            <div className="md:hidden flex items-center">
+              <button onClick={toggleMenu} className="text-white focus:outline-none">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        {isMobile && isMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-h1-color bg-cover mt-2 px-4 space-y-2">
+            <Link href="/">
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Página Inicial</p>
+            </Link>
+            <Link href="/hepatohub">
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Sobre</p>
+            </Link>
+            <Link href="/autocuidado">
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Auto Cuidado</p>
+            </Link>
+            <Link href="/construcao">
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Medicamentos</p>
+            </Link>
+            <Link href="/construcao">
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Conheça a Equipe</p>
+            </Link>
+            <Link href="/construcao">
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Colabore</p>
+            </Link>
+            <form onSubmit={handleSearch} className="relative mt-2">
+              <input 
+                type="text" 
+                placeholder="Pesquisar..." 
+                value={searchTerm} 
+                onChange={handleChange} 
+                className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-full" 
+              />
+              <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                <div className='bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]'>
+                  <button type="submit">
+                    <Image src="/lupa.png" alt="Ícone de busca" width={14} height={14} priority={true} />
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         )}
       </div>
