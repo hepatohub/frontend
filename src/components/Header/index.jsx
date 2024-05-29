@@ -1,85 +1,93 @@
 "use client"
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SearchContext } from '@/contexts/SearchContext';
+import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
   const [originalContent, setOriginalContent] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 768 }); // Adapte o valor conforme necessário
 
   useEffect(() => {
     setOriginalContent(document.documentElement.innerHTML);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const handleSearch = (e) => {
     e.preventDefault();
-    const elements = document.querySelectorAll("*:not(script):not(style)");
-    elements.forEach(element => {
-      const regex = new RegExp(`(${searchTerm})`, 'gi');
-      const html = element.innerHTML;
-      element.innerHTML = html.replace(regex, '<span class="highlight">$1</span>');
-      element.classList.add('search-result');
-     
-    });
-   
+    // Implemente a lógica de pesquisa aqui
   };
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  const handleReset = () => {
-    document.documentElement.innerHTML = originalContent;
-    setSearchTerm('');
-  };
-
   return (
     <>
       <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="w-full flex justify-between items-center px-4">
           <div className="flex-shrink-0">
             <Image src="/logoHeader.png" alt="Logo" width={99} height={76} priority={true} />
           </div>
-          <nav className="hidden md:flex flex-grow justify-center">
+          <nav className={`hidden md:flex flex-grow justify-center space-x-11 ${isMenuOpen || isMobile ? 'block' : 'hidden'}`}>
+
             <Link href="/">
-              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Página Inicial</p>
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Página Inicial</p>
             </Link>
             <Link href="/hepatohub">
-              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Sobre</p>
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Sobre</p>
             </Link>
             <Link href="/autocuidado">
-              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Auto Cuidado</p>
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Auto Cuidado</p>
             </Link>
             <Link href="/construcao">
-              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Medicamentos</p>
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Medicamentos</p>
             </Link>
             <Link href="/construcao">
-              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Conheça a Equipe</p>
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Conheça a Equipe</p>
             </Link>
             <Link href="/construcao">
-              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer">Colabore</p>
+              <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">Colabore</p>
             </Link>
           </nav>
           <div className="ml-auto flex-shrink-0 relative">
-            <form onSubmit={handleSearch}>
-              <input 
-                type="text" 
-                placeholder="Pesquisar..." 
-                value={searchTerm} 
-                onChange={handleChange} 
-                className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400" 
-              />
-              <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
-                <div className='bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]'>
-                  <button type="submit">
-                    <Image src="/lupa.png" alt="Ícone de busca" width={14} height={14} priority={true} />
-                  </button>
-                </div>
-              </div>
-            </form>
+            <div className="md:hidden flex items-center">
+              <button onClick={toggleMenu} className="text-white focus:outline-none">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
+        {(!isMenuOpen || isMobile) && (
+          <div className="hidden md:block">
+            <div className="ml-auto flex-shrink-0 relative" style={{ marginRight: '20px' }}>
+              <form onSubmit={handleSearch}>
+                <input 
+                  type="text" 
+                  placeholder="Pesquisar..." 
+                  value={searchTerm} 
+                  onChange={handleChange} 
+                  className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400" 
+                />
+                <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                  <div className='bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]'>
+                    <button type="submit">
+                      <Image src="/lupa.png" alt="Ícone de busca" width={14} height={14} priority={true} />
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

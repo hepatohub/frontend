@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&display=swap');
 
+body {
+  font-family: 'Be Vietnam', sans-serif;
+}
 
 .highlight {
   background-color: yellow;
