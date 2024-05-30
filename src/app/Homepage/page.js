@@ -5,14 +5,14 @@ import Header from '@/components/Header'
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
-import { SearchProvider } from '@/contexts/SearchContext';
+// import { SearchProvider } from '@/contexts/SearchContext';
 import Cards from '@/components/Cards';
 import cardsData from '@/data/cardsData';
 
 const Homepage = () => {
   return (
     <>
-      <SearchProvider>
+      {/* <SearchProvider> */}
         <Header />
 
         <section className="bg-bg-homepage w-full h-700 flex flex-col items-center bg-bgHome bg-no-repeat bg-cover">
@@ -74,7 +74,7 @@ const Homepage = () => {
         </main>
 
         <Footer />
-      </SearchProvider>
+      {/* </SearchProvider> */}
     </>
   );
 };
