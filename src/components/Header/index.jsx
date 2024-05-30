@@ -2,11 +2,11 @@
 import React, { useState, useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { SearchContext } from '@/contexts/SearchContext';
+// import { SearchContext } from '@/contexts/SearchContext';
 import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
-  const { searchTerm, setSearchTerm } = useContext(SearchContext);
+  // const { searchTerm, setSearchTerm } = useContext(SearchContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
@@ -56,7 +56,7 @@ const Header = () => {
                 <input 
                   type="text" 
                   placeholder="Pesquisar..." 
-                  value={searchTerm} 
+                  // value={searchTerm} 
                   onChange={handleChange} 
                   className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400" 
                 />
@@ -102,7 +102,7 @@ const Header = () => {
               <input 
                 type="text" 
                 placeholder="Pesquisar..." 
-                value={searchTerm} 
+                // value={searchTerm} 
                 onChange={handleChange} 
                 className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-full" 
               />
