@@ -1,6 +1,6 @@
 "use client"
-import React, {useState} from "react";
-import {FaWhatsapp, FaPhone} from "react-icons/fa";
+import React, { useState } from "react";
+import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import {
   AiOutlineMail,
   AiFillLinkedin,
@@ -14,13 +14,12 @@ const getYear = () => {
 };
 
 const Footer = () => {
-
- 
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
     mensagem: "",
   });
+
   const [formErrors, setFormErrors] = useState({
     nome: "",
     email: "",
@@ -51,27 +50,28 @@ const Footer = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Verificar se há erros de validação antes de enviar o formulário
-    if (!validateForm()) {
-      // Aqui você pode realizar a lógica para enviar os dados do formulário
-      console.log(formData);
-      // Resetar o estado do formulário após o envio
-      setFormData({
-        nome: "",
-        email: "",
-        mensagem: "",
-      });
-      setFormErrors({
-        nome: "",
-        email: "",
-        mensagem: "",
-      });
-    } else {
-      console.log("Por favor, corrija os erros antes de enviar o formulário.");
-    }
-  };
+ const handleSubmit = (e) => {
+  // Remova a chamada e.preventDefault() desta função
+  // Verificar se há erros de validação antes de enviar o formulário
+  if (!validateForm()) {
+    // Aqui você pode realizar a lógica para enviar os dados do formulário
+    console.log(formData);
+    // Resetar o estado do formulário após o envio
+    setFormData({
+      nome: "",
+      email: "",
+      mensagem: "",
+    });
+    setFormErrors({
+      nome: "",
+      email: "",
+      mensagem: "",
+    });
+  } else {
+    console.log("Por favor, corrija os erros antes de enviar o formulário.");
+  }
+};
+
 
   const validateForm = () => {
     return Object.values(formErrors).every((error) => error === "");
@@ -90,16 +90,17 @@ const Footer = () => {
       email: "",
       mensagem: "",
     });
-  
+
     // Reseta os erros do formulário
     setFormErrors({
       nome: "",
       email: "",
       mensagem: "",
     });
-    
+
     console.log("Formulário cancelado");
   };
+
   return (
     <footer className="bg-bgFooter bg-no-repeat bg-cover bg-footer text-white py-12 text-shadow font-vietnam">
       <div className="container mx-auto flex flex-wrap justify-around">
@@ -190,7 +191,7 @@ const Footer = () => {
         {/* Formulário */}
         <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8">
           <h2 className="text-lg font-bold mb-4">Formulário</h2>
-          <form  onSubmit={handleSubmit}>
+          <form action="https://formspree.io/f/xeqybjgz" method="POST" onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="nome" className="block text-sm font-bold mb-1">
                 Nome:
@@ -254,7 +255,7 @@ const Footer = () => {
               <ButtonAction
                 text="Enviar"
                 type="submit"
-                onClick={handleSubmit}
+                onClick={handleSubmit} 
               />
               <ButtonAction
                 text="Cancelar"

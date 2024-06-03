@@ -1,29 +1,25 @@
 import React from "react";
-import Link from "next/link";
 
-const ButtonAction = ({ href, children, text }) => {
+const ButtonAction = ({ onClick, children, text, type }) => {
   const buttonStyle = {
     backgroundImage: "linear-gradient(227deg, #36B4E1 25.17%, #164B6D 73.99%)",
     borderRadius: "64px",
     border: "none",
-    padding: "10px 20px", // Ajuste o padding conforme necessário
+    padding: "10px 20px",
     color: "#FFFFFF",
-    textDecoration: "none", // Remover decoração de texto para o link
-    cursor: "pointer", // Alterar o cursor para indicar que é clicável
-    display: "inline-block", // Definir para que o botão se comporte como um link
-    // Adições para acessibilidade
-    role: "button", // Indicar que o div funciona como um botão
-    tabIndex: 0 // Tornar o botão focável por meio da navegação com a tecla Tab
+    textDecoration: "none",
+    cursor: "pointer",
+    display: "inline-block",
   };
 
-  const handleClick = () => {
-    // Lógica para manipular o clique do botão
-    console.log("Botão clicado!");
+  const handleClick = (e) => {
+    
+    onClick(); // Chamar a função de clique fornecida
   };
 
   return (
-    <button style={buttonStyle} onClick={handleClick}>
-      {text}
+    <button style={buttonStyle} onClick={handleClick} type={type}>
+      {text || children} 
     </button>
   );
 };
