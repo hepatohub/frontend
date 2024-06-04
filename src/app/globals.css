@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&display=swap');
 
+body {
+  font-family: 'Be Vietnam', sans-serif;
+}
 
 .highlight {
   background-color: yellow;
 }
 
+.mobileMenu {
+  /* Estilos base do menu para mobile */
+  display: none; /* Oculta por padrão */
+}
+
+.mobileMenu.open {
+  display: block; /* Mostra quando o menu estiver aberto */
+  /* Adicione aqui os estilos de fundo para os links */
+}
 
 
