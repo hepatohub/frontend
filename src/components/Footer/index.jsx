@@ -50,54 +50,45 @@ const Footer = () => {
     }
   };
 
- const handleSubmit = (e) => {
-  // Remova a chamada e.preventDefault() desta função
-  // Verificar se há erros de validação antes de enviar o formulário
-  if (!validateForm()) {
-    // Aqui você pode realizar a lógica para enviar os dados do formulário
-    console.log(formData);
-    // Resetar o estado do formulário após o envio
-    setFormData({
-      nome: "",
-      email: "",
-      mensagem: "",
-    });
-    setFormErrors({
-      nome: "",
-      email: "",
-      mensagem: "",
-    });
-  } else {
-    console.log("Por favor, corrija os erros antes de enviar o formulário.");
-  }
-};
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log(formData);
+      setFormData({
+        nome: "",
+        email: "",
+        mensagem: "",
+      });
+      setFormErrors({
+        nome: "",
+        email: "",
+        mensagem: "",
+      });
+    } else {
+      console.log("Por favor, corrija os erros antes de enviar o formulário.");
+    }
+  };
 
   const validateForm = () => {
     return Object.values(formErrors).every((error) => error === "");
   };
 
   const isValidEmail = (email) => {
-    // Expressão regular para validar email
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   };
 
   const handleCancel = () => {
-    // Reseta o estado do formulário para os valores iniciais
     setFormData({
       nome: "",
       email: "",
       mensagem: "",
     });
-
-    // Reseta os erros do formulário
     setFormErrors({
       nome: "",
       email: "",
       mensagem: "",
     });
-
     console.log("Formulário cancelado");
   };
 
@@ -105,39 +96,39 @@ const Footer = () => {
     <footer className="bg-bgFooter bg-no-repeat bg-cover bg-footer text-white py-12 text-shadow font-vietnam">
       <div className="container mx-auto flex flex-wrap justify-around">
         {/* Categoria */}
-        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8">
+        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
           <h2 className="text-lg font-bold mb-4">Categoria</h2>
           <ul>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-8">
+              <a href="#" className="text-base block hover:text-gray-400 mb-2">
                 Página Inicial
               </a>
             </li>
             <li>
               <a
                 href="/hepatohub"
-                className="text-base block hover:text-gray-400 mb-8"
+                className="text-base block hover:text-gray-400 mb-2"
               >
                 Hepato Hub
               </a>
             </li>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-8">
+              <a href="#" className="text-base block hover:text-gray-400 mb-2">
                 Auto Cuidado
               </a>
             </li>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-8">
+              <a href="#" className="text-base block hover:text-gray-400 mb-2">
                 Medicamentos
               </a>
             </li>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-8">
+              <a href="#" className="text-base block hover:text-gray-400 mb-2">
                 Conheça a Equipe
               </a>
             </li>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-8">
+              <a href="#" className="text-base block hover:text-gray-400 mb-2">
                 Colabore
               </a>
             </li>
@@ -145,22 +136,22 @@ const Footer = () => {
         </div>
 
         {/* Atendimento */}
-        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8">
+        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
           <h2 className="text-lg font-bold mb-4">Atendimento</h2>
           <ul>
-            <li className="flex items-center mb-5">
+            <li className="flex items-center mb-2">
               <FaWhatsapp className="mr-2" />
               <a href="#" className="text-base hover:text-gray-400">
                 WhatsApp: +123456789
               </a>
             </li>
-            <li className="flex items-center mb-5">
+            <li className="flex items-center mb-2">
               <FaPhone className="mr-2" />
               <a href="#" className="text-base hover:text-gray-400">
                 Telefone: +987654321
               </a>
             </li>
-            <li className="flex items-center mb-5">
+            <li className="flex items-center mb-2">
               <AiOutlineMail className="mr-2" />
               <a
                 href="mailto: portalhepatico@gmail.com"
@@ -173,7 +164,7 @@ const Footer = () => {
         </div>
 
         {/* Social */}
-        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8">
+        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
           <h2 className="text-lg font-bold mb-4">Social</h2>
           <div className="flex items-center">
             <a href="#" className="mr-4 hover:text-gray-400">
@@ -189,7 +180,7 @@ const Footer = () => {
         </div>
 
         {/* Formulário */}
-        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8">
+        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
           <h2 className="text-lg font-bold mb-4">Formulário</h2>
           <form action="https://formspree.io/f/xeqybjgz" method="POST" onSubmit={handleSubmit}>
             <div className="mb-4">
@@ -251,7 +242,7 @@ const Footer = () => {
                 </span>
               )}
             </div>
-            <div className="flex justify-end gap-5">
+            <div className="flex flex-col sm:flex-row justify-end gap-5">
               <ButtonAction
                 text="Enviar"
                 type="submit"
@@ -268,7 +259,7 @@ const Footer = () => {
       </div>
 
       {/* Links adicionais */}
-      <div className="container mx-auto mt-8 text-base">
+      <div className="container mx-auto mt-8 text-base px-4">
         <div className="mb-4">
           <a href="#" className="mr-4 hover:text-gray-400">
             Termos de uso
