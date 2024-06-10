@@ -12,7 +12,7 @@ const Login = () => {
         <Button text="Home" href="/Homepage" />
       </div>
   
-      <div className="bg-login2 bg-no-repeat bg-cover flex pt-20 pl-10 w-[980px] h-[750px] rounded-[100px]">
+      <div className="bg-login2 bg-no-repeat bg-cover flex pt-20 pl-10 w-[873px] h-[589px] rounded-[100px]">
         <div className="max-w-sm w-[300px] h-[675px] shadow-none shadow-right border-l-0 overflow-hidden">
           <div className="flex justify-between">
             <button
