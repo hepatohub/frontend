@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Button from '@/components/Button';
 import LoginForm from "@/components/LoginForm";
 
 const Login = () => {
-  // Definindo os estados para controlar a guia ativa
   const [activeTab, setActiveTab] = useState("Entrar");
 
   return (
@@ -34,7 +33,6 @@ const Login = () => {
             </button>
           </div>
           <div className="pt-10">
-            {/* Renderiza o formulário de acordo com a guia ativa */}
             {activeTab === "Entrar" ? (
               <LoginForm mode="login" />
             ) : (

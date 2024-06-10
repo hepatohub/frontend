@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import Button from "../Button";
+import ButtonAction from "../ButtonAction";
 
 const LoginForm = ({ onLogin, onRegister, mode }) => {
   const {
@@ -11,56 +11,47 @@ const LoginForm = ({ onLogin, onRegister, mode }) => {
 
   const onSubmit = (data) => {
     if (mode === "login") {
-      // Lógica de login
       onLogin(data);
     } else {
-      // Lógica de registro
       onRegister(data);
     }
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         {mode === "register" && (
           <div>
             {errors.name && <p style={{ color: "red" }}>Nome é obrigatório</p>}
             <input
               type="text"
-              placeholder="Nome"
+              placeholder="Insira seu nome e sobrenome"
               {...register("name", { required: true })}
-            />
-          </div>
-        )}
-        {mode === "register" && (
-          <div>
-            {errors.email && <p style={{ color: "red" }}>Email é obrigatório</p>}
-            <input
-              type="email"
-              placeholder="Email"
-              {...register("email", { required: true })}
+              className="mt-1 p-4 w-full bg-transparent border-b-2 outline-none text-cards"
             />
           </div>
         )}
         <div>
+          {errors.email && <p style={{ color: "red" }}>Email é obrigatório</p>}
+          <input
+            type="email"
+            placeholder="Insira seu e-mail"
+            {...register("email", { required: true })}
+            className="mt-1 p-4 w-full bg-transparent border-b-2 outline-none text-cards"
+          />
+        </div>
+        <div>
           {errors.password && <p style={{ color: "red" }}>Senha é obrigatória</p>}
           <input
             type="password"
-            placeholder="Senha"
+            placeholder="Insira sua senha"
             {...register("password", { required: true })}
+            className="mt-1 p-4 w-full bg-transparent border-b-2 outline-none text-cards"
           />
         </div>
-        {mode === "register" && (
-          <div>
-            {errors.confirmPassword && <p style={{ color: "red" }}>Confirmação de Senha é obrigatória</p>}
-            <input
-              type="password"
-              placeholder="Confirmar Senha"
-              {...register("confirmPassword", { required: true })}
-            />
-          </div>
-        )}
-        <Button type="submit">{mode === "login" ? "Entrar" : "Cadastrar"}</Button>
+        <div className="flex justify-center pt-10 ">
+          <ButtonAction type="submit">{mode === "login" ? "Entrar" : "Cadastrar"}</ButtonAction>
+        </div>
       </form>
     </div>
   );

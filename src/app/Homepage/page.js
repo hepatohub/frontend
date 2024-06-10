@@ -12,6 +12,14 @@ const Homepage = () => {
   return (
     <>
       <Header />
+      <section className="bg-bg-homepage w-full h-700 flex flex-col items-center bg-bgHome bg-no-repeat bg-cover">
+          <div className="flex flex-row items-end justify-end w-full mt-2 mr-4">
+            <Button text="Entrar" href="/login" />
+            <div className="ml-4"></div>{" "}
+            {/* Adicionando margem entre os botões */}
+            <Button text="Cadastrar" href="/login" />
+          </div>
+        </section>
 
       <section className="relative bg-bg-homepage bg-bgHome bg-no-repeat bg-cover py-10 px-4 md:px-8 lg:px-16 xl:px-20">
   <div className="container mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
