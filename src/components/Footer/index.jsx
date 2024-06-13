@@ -182,7 +182,7 @@ const Footer = () => {
         {/* Formulário */}
         <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
           <h2 className="text-lg font-bold mb-4">Formulário</h2>
-          <form action="https://formspree.io/f/xeqybjgz" method="POST" onSubmit={handleSubmit}>
+          <form action="https://formspree.io/f/xeqybjgz" method="POST" >
             <div className="mb-4">
               <label htmlFor="nome" className="block text-sm font-bold mb-1">
                 Nome:
