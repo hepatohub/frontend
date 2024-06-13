@@ -1,4 +1,5 @@
 "use client";
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -116,7 +117,7 @@ const Header = () => {
         </div>
       </div>
       {isMobile && isMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-h1-color bg-cover mt-2 px-4 space-y-2">
+        <div className="absolute top-full left-0 right-0 bg-h1-color bg-cover mt-2 px-4 space-y-2 z-50">
           <Link href="/">
             <p className="text-white hover:text-gray-200 px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
               Página Inicial
