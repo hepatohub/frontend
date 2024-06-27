@@ -7,13 +7,16 @@ const Login = () => {
   const [activeTab, setActiveTab] = useState("Entrar");
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-bgLogin bg-no-repeat bg-cover bg-footer relative">
+    <div className="flex flex-col justify-center items-center h-screen bg-bgLogin bg-no-repeat bg-cover bg-footer relative w-full">
       <div className="absolute top-0 right-0 m-4">
         <Button text="Home" href="/Homepage" />
       </div>
   
-      <div className="bg-login2 bg-no-repeat bg-cover flex pt-20 pl-10 w-[873px] h-[589px] rounded-[100px]">
-        <div className="max-w-sm w-[300px] h-[675px] shadow-none shadow-right border-l-0 overflow-hidden">
+      <div className="
+        bg-login2 bg-no-repeat bg-cover flex h-[589px] rounded-[100px]
+        sm:w-4/5 sm:pt-20 sm:pl-6
+        lg:w-[873px] lg:pt-20 lg:pl-10">
+        <div className="max-w-sm w-[300px] h-[675px] shadow-none shadow-right border-l-0 overflow-hidden ">
           <div className="flex justify-between">
             <button
               className={`p-4 w-[50%] text-center ${
