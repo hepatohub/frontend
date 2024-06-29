@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const construcao = () => {
+export default function NotFound() {
   return (
   <div className="
     bg-hepato-blue flex items-center justify-center h-[100vh]
@@ -23,7 +23,7 @@ const construcao = () => {
       </section>
 
       <div className="mt-7 flex flex-col items-center">
-        <p className='text-roxo text-center text-xl font-semibold 
+        <p className='text-roxo text-center font-semibold 
           lg:w-[685px] lg:text-xl
           sm:max-w-full sm:text-2xl
         '>Página não encontrada. Desculpe pelo transtorno. Se precisar de ajuda, entre em contato conosco.</p>
@@ -36,5 +36,3 @@ const construcao = () => {
   </div>
   );
 };
-
-export default construcao;
