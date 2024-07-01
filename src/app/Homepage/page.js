@@ -11,7 +11,6 @@ import cardsData from '@/data/cardsData';
 const Homepage = () => {
   return (
     <>
-      <Header />
       <section className="bg-bg-homepage w-full h-700 flex flex-col items-center bg-bgHome bg-no-repeat bg-cover">
           <div className="flex flex-row items-end justify-end w-full mt-2 mr-4">
             <Button text="Entrar" href="/login" />
@@ -61,8 +60,6 @@ const Homepage = () => {
           ))}
         </div>
       </main>
-
-      <Footer />
     </>
   );
 };

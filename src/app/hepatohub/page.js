@@ -8,7 +8,6 @@ import React from 'react'
 const hepatohub = () => {
   return (
     <>
-      <Header />
       <section className='bg-bgHepatohub bg-no-repeat bg-cover h-[698px] relative -mt-1'>
         <div className='flex flex-row items-end justify-end w-full pt-4 pr-6'>
           <Button text="Entrar" />
@@ -18,7 +17,7 @@ const hepatohub = () => {
         <h2 className='text-hepato-blue text-2xl w-[528px] absolute bottom-0 left-0 right-0 ml-auto mr-6 mb-8 text-right'>Juntos pela saúde do fígado <br/> Seu hub de informação e apoio.</h2>
       </section>
       <main className='
-        bg-bgSechepato bg-no-repeat bg-cover pb-2 lg:h-[1397px] 
+        bg-bgSechepato bg-no-repeat bg-cover pb-2 lg:min-h-screen 
         sm:min-h-screen sm:flex sm:flex-col sm:gap-12
       '>
       <h1 className='text-[#174F73] font-bold  text-6xl text-center pt-3'>HEPATO HUB</h1>
@@ -102,7 +101,6 @@ const hepatohub = () => {
       </div>
       
       </main>
-      <Footer />
     </>
   )
 }
