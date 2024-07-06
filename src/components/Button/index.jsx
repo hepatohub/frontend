@@ -13,7 +13,9 @@ const Button = ({ href, children, text }) => {
     display: "inline-block", // Definir para que o botão se comporte como um link
     // Adições para acessibilidade
     role: "button", // Indicar que o div funciona como um botão
-    tabIndex: 0 // Tornar o botão focável por meio da navegação com a tecla Tab
+    tabIndex: 0, // Tornar o botão focável por meio da navegação com a tecla Tab
+    width: "185.27px",
+    textAlign: "center"
   };
 
   // Verificar se href está definido antes de renderizar o Link
