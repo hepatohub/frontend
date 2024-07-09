@@ -97,38 +97,38 @@ const Footer = () => {
       <div className="container mx-auto flex flex-wrap justify-around">
         {/* Categoria */}
         <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
-          <h2 className="text-lg font-bold mb-4">Categoria</h2>
-          <ul>
+          <h2 className="text-lg font-bold mb-12">CATEGORIAS</h2>
+          <ul className="flex flex-col gap-5">
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-2">
+              <a href="#" className="text-base block hover:text-gray-400">
                 Página Inicial
               </a>
             </li>
             <li>
               <a
                 href="/hepatohub"
-                className="text-base block hover:text-gray-400 mb-2"
+                className="text-base block hover:text-gray-400"
               >
                 Hepato Hub
               </a>
             </li>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-2">
+              <a href="#" className="text-base block hover:text-gray-400">
                 Auto Cuidado
               </a>
             </li>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-2">
+              <a href="#" className="text-base block hover:text-gray-400">
                 Medicamentos
               </a>
             </li>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-2">
+              <a href="#" className="text-base block hover:text-gray-400">
                 Conheça a Equipe
               </a>
             </li>
             <li>
-              <a href="#" className="text-base block hover:text-gray-400 mb-2">
+              <a href="#" className="text-base block hover:text-gray-400">
                 Colabore
               </a>
             </li>
@@ -137,21 +137,21 @@ const Footer = () => {
 
         {/* Atendimento */}
         <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
-          <h2 className="text-lg font-bold mb-4">Atendimento</h2>
-          <ul>
-            <li className="flex items-center mb-2">
+          <h2 className="text-lg font-bold mb-12">ATENDIMENTO</h2>
+          <ul className="flex flex-col gap-6">
+            <li className="flex items-center">
               <FaWhatsapp className="mr-2" />
               <a href="#" className="text-base hover:text-gray-400">
                 WhatsApp: +123456789
               </a>
             </li>
-            <li className="flex items-center mb-2">
+            <li className="flex items-center">
               <FaPhone className="mr-2" />
               <a href="#" className="text-base hover:text-gray-400">
                 Telefone: +987654321
               </a>
             </li>
-            <li className="flex items-center mb-2">
+            <li className="flex items-center">
               <AiOutlineMail className="mr-2" />
               <a
                 href="mailto: portalhepatico@gmail.com"
@@ -164,8 +164,9 @@ const Footer = () => {
         </div>
 
         {/* Social */}
-        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
-          <h2 className="text-lg font-bold mb-4">Social</h2>
+        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4 flex justify-start
+        items-center flex-col">
+          <h2 className="text-lg font-bold mb-12">SOCIAL</h2>
           <div className="flex items-center">
             <a href="#" className="mr-4 hover:text-gray-400">
               <AiFillInstagram className="w-10 h-10" />
@@ -181,11 +182,11 @@ const Footer = () => {
 
         {/* Formulário */}
         <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
-          <h2 className="text-lg font-bold mb-4">Formulário</h2>
-          <form action="https://formspree.io/f/xeqybjgz" method="POST" >
+          <h2 className="text-lg font-bold mb-12">FORMULÁRIO</h2>
+          <form action="https://formspree.io/f/xeqybjgz" method="POST" className="flex flex-col gap-4">
             <div className="mb-4">
               <label htmlFor="nome" className="block text-sm font-bold mb-1">
-                Nome:
+                Nome
               </label>
               <input
                 type="text"
@@ -203,7 +204,7 @@ const Footer = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-bold mb-1">
-                E-mail:
+                E-mail
               </label>
               <input
                 type="email"
@@ -224,7 +225,7 @@ const Footer = () => {
                 htmlFor="mensagem"
                 className="block text-sm font-bold mb-1"
               >
-                Mensagem:
+                Mensagem
               </label>
               <textarea
                 id="mensagem"
@@ -233,7 +234,7 @@ const Footer = () => {
                 onChange={handleChange}
                 placeholder="Mensagem"
                 maxLength={1000}
-                className="w-full px-4 py-2 rounded bg-white text-black outline-none"
+                className="w-full px-4 py-2 rounded bg-white text-black outline-none h-[78px]"
                 required
               />
               {formErrors.mensagem && (
@@ -259,9 +260,9 @@ const Footer = () => {
       </div>
 
       {/* Links adicionais */}
-      <div className="container mx-auto mt-8 text-base px-4">
+      <div className="container mx-auto mt-8 text-base">
         <div className="mb-4">
-          <a href="#" className="mr-4 hover:text-gray-400">
+          <a href="#" className="hover:text-gray-400 mr-8">
             Termos de uso
           </a>
           <a href="#" className="hover:text-gray-400">
