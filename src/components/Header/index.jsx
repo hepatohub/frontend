@@ -79,16 +79,16 @@ const Header = () => {
                 placeholder="Pesquisar..."
                 value={searchTerm}
                 onChange={handleChange}
-                className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-[256px]"
               />
               <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
-                <div className="bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]">
-                  <button type="submit">
+                <div className="">
+                  <button type="submit" className="bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]">
                     <Image
                       src="/lupa.png"
                       alt="Ícone de busca"
-                      width={14}
-                      height={14}
+                      width={24}
+                      height={24}
                       priority={true}
                     />
                   </button>
@@ -97,7 +97,7 @@ const Header = () => {
             </form>
           </div>
           <div className="md:hidden flex items-center">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
+            <button onClick={toggleMenu} className="text-white focus:outline-none ">
               <svg
                 className="w-6 h-6"
                 fill="none"
