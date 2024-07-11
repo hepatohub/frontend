@@ -151,11 +151,11 @@ const Footer = () => {
                 Telefone: +987654321
               </a>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center flex-wrap">
               <AiOutlineMail className="mr-2" />
               <a
                 href="mailto: portalhepatico@gmail.com"
-                className="text-base  hover:text-gray-400"
+                className="sm:text-[14px] lg:text-base text-wrap hover:text-gray-400 max-w-full"
               >
                 E-mail: portalhepatico@gmail.com
               </a>
