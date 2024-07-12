@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
+import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,6 +23,57 @@ const Header = () => {
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
   };
+
+
+    // const itemsLink = [
+  //   {
+  //     id: uuidv4(),
+  //     texto: "Página Inicial",
+  //     href: ""
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     texto: "HepatoHub",
+  //     href: "hepatohub"
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     texto: "Auto Cuidado",
+  //     href: "autocuidado"
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     texto: "Medicamentos",
+  //     href: "construcao"
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     texto: "Alimentação",
+  //     href: "construcao"
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     texto: "Conheça a Equipe",
+  //     href: "construcao"
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     texto: "Fórum",
+  //     href: "construcao"
+  //   }
+  // ]
+  
+  // { itemsLink && itemsLink.map(item => 
+  //   item.href !== undefined ? (
+  //     <Link href={{
+  //       pathname: `/${item.href}`
+  //     }} key={item.id}>
+  //       <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+  //         {item.texto}
+  //       </p>
+  //     </Link>)
+  //   : null
+  // )}
 
   return (
     <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
@@ -47,7 +99,7 @@ const Header = () => {
           </Link>
           <Link href="/hepatohub">
             <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-              Sobre
+              HepatoHub
             </p>
           </Link>
           <Link href="/autocuidado">
@@ -62,12 +114,17 @@ const Header = () => {
           </Link>
           <Link href="/construcao">
             <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+              Alimentação
+            </p>
+          </Link>
+          <Link href="/construcao">
+            <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
               Conheça a Equipe
             </p>
           </Link>
           <Link href="/construcao">
             <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-              Colabore
+              Fórum
             </p>
           </Link>
         </nav>
@@ -84,13 +141,15 @@ const Header = () => {
               <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
                 <div className="">
                   <button type="submit" className="bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]">
-                    <Image
+                    {/* <Image
                       src="/lupa.png"
                       alt="Ícone de busca"
-                      width={24}
-                      height={24}
+                      width={20}
+                      height={20}
                       priority={true}
-                    />
+                      className="rounded-full flex justify-center items-center"
+                    /> */}
+                    <FaSearch size={14} color="white"/>
                   </button>
                 </div>
               </div>

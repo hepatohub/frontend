@@ -105,4 +105,4 @@ const hepatohub = () => {
   )
 }
 
-export default hepatohub
+export default hepatohub;

@@ -8,6 +8,7 @@ import {
   AiFillFacebook,
 } from "react-icons/ai";
 import ButtonAction from "../ButtonAction";
+import Button from "../Button";
 
 const getYear = () => {
   return new Date().getFullYear();
@@ -124,12 +125,17 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" className="text-base block hover:text-gray-400">
+                Alimentação
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-base block hover:text-gray-400">
                 Conheça a Equipe
               </a>
             </li>
             <li>
               <a href="#" className="text-base block hover:text-gray-400">
-                Colabore
+                Fórum
               </a>
             </li>
           </ul>
@@ -139,18 +145,6 @@ const Footer = () => {
         <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
           <h2 className="text-lg font-bold mb-12">ATENDIMENTO</h2>
           <ul className="flex flex-col gap-6">
-            <li className="flex items-center">
-              <FaWhatsapp className="mr-2" />
-              <a href="#" className="text-base hover:text-gray-400">
-                WhatsApp: +123456789
-              </a>
-            </li>
-            <li className="flex items-center">
-              <FaPhone className="mr-2" />
-              <a href="#" className="text-base hover:text-gray-400">
-                Telefone: +987654321
-              </a>
-            </li>
             <li className="flex items-center flex-wrap">
               <AiOutlineMail className="mr-2" />
               <a
@@ -244,15 +238,21 @@ const Footer = () => {
               )}
             </div>
             <div className="flex flex-col sm:flex-row justify-end gap-5">
-              <ButtonAction
+              <Button
                 text="Enviar"
                 type="submit"
-                onClick={handleSubmit} 
+                href={"/"}
+                onClick={handleSubmit}
+                rounded={false}
+                widthPrimario={false}
               />
-              <ButtonAction
+              <Button
                 text="Cancelar"
                 type="button"
+                href={"/"}
                 onClick={handleCancel}
+                rounded={false}
+                widthPrimario={false}
               />
             </div>
           </form>
