@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
+import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,13 +85,15 @@ const Header = () => {
               <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
                 <div className="">
                   <button type="submit" className="bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]">
-                    <Image
+                    {/* <Image
                       src="/lupa.png"
                       alt="Ícone de busca"
-                      width={24}
-                      height={24}
+                      width={20}
+                      height={20}
                       priority={true}
-                    />
+                      className="rounded-full flex justify-center items-center"
+                    /> */}
+                    <FaSearch size={14} color="white"/>
                   </button>
                 </div>
               </div>
