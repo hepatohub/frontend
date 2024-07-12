@@ -8,6 +8,7 @@ import {
   AiFillFacebook,
 } from "react-icons/ai";
 import ButtonAction from "../ButtonAction";
+import Button from "../Button";
 
 const getYear = () => {
   return new Date().getFullYear();
@@ -244,15 +245,21 @@ const Footer = () => {
               )}
             </div>
             <div className="flex flex-col sm:flex-row justify-end gap-5">
-              <ButtonAction
+              <Button
                 text="Enviar"
                 type="submit"
-                onClick={handleSubmit} 
+                href={"/"}
+                onClick={handleSubmit}
+                rounded={false}
+                widthPrimario={false}
               />
-              <ButtonAction
+              <Button
                 text="Cancelar"
                 type="button"
+                href={"/"}
                 onClick={handleCancel}
+                rounded={false}
+                widthPrimario={false}
               />
             </div>
           </form>

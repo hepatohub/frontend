@@ -14,7 +14,7 @@ const Homepage = () => {
     <div className='bg-bg-homepage bg-bgHome bg-no-repeat bg-cover'>
       <section className="bg-bg-homepage w-full h-700 flex flex-col items-center bg-white">
           <div className="flex items-center justify-end w-full p-3 gap-5">
-            <Button text="Entrar" href="/login" />
+            <Button text="Entrar" href="/login" widthPrimario={false}/>
             <Button text="Cadastrar" href="/login" />
           </div>
       </section>
@@ -32,17 +32,17 @@ const Homepage = () => {
             </p>
           </div>
           <div className="flex flex-col  items-center md:flex-row md:space-y-0 md:space-x-4">
-            <Button text="Saúde Hepática" href={"/construcao"}/>
-            <Button text="Medicamentos" href={"/construcao"}/>
+            <Button text="Saúde Hepática" href={"/construcao"} widthPrimario={true}/>
+            <Button text="Medicamentos" href={"/construcao"} />
           </div>
         </div>
         <div className="flex justify-end">
           <Image
-          className='ml-44'
+              className='ml-44'
             src="/logo.png"
             alt="Logo"
             width={534}
-            height={534}
+              height={534}
           />
         </div>
         </div>
