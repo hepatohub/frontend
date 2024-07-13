@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { LiaUserCheckSolid } from "react-icons/lia";
+import { PiSirenThin } from "react-icons/pi";
 import { TbNotes } from "react-icons/tb";
 import { TiMessages } from "react-icons/ti";
-import { PiSirenThin } from "react-icons/pi";
 import { useMediaQuery } from "react-responsive";
 
 const Header = () => {
@@ -166,27 +166,27 @@ const Header = () => {
               </div>
               <div className="bg-[#D9D9D9] p-4 h-[calc(100%-3rem)] overflow-auto w-[80%] ">
                 <Link href="/">
-                  <div className="flex items-center text-[#0E3A56] hover:text-gray-200 py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b-2 border-gray-300">
+                  <div className="flex items-center text-[#0E3A56] py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b-2 border-gray-300">
                     <LiaUserCheckSolid className="mr-2" /> Acessar
                   </div>
                 </Link>
                 <Link href="/buscar">
-                  <div className="flex items-center text-[#0E3A56] hover:text-gray-200 py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b-2 border-gray-300">
+                  <div className="flex items-center text-[#0E3A56] py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b-2 border-gray-300">
                     <AiOutlineSearch className="mr-2" /> Buscar
                   </div>
                 </Link>
                 <Link href="/contato">
-                  <div className="flex items-center text-[#0E3A56] hover:text-gray-200 py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b-2 border-gray-300">
+                  <div className="flex items-center text-[#0E3A56] py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b-2 border-gray-300">
                     <TiMessages className="mr-2" /> Contato
                   </div>
                 </Link>
                 <Link href="/sobre">
-                  <div className="flex items-center text-[#0E3A56] hover:text-gray-200 py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b-2 border-gray-300">
+                  <div className="flex items-center text-[#0E3A56] py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b-2 border-gray-300">
                     <TbNotes className="mr-2" /> Sobre
                   </div>
                 </Link>
                 <Link href="/ajuda">
-                  <div className="flex items-center text-[#8C302B] hover:text-gray-200 py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b border-gray-300">
+                  <div className="flex items-center text-[#8C302B] py-2 ml-10 cursor-pointer font-be-vietnam text-xl font-500 border-b border-gray-300">
                     <PiSirenThin className="mr-2" /> Ajuda
                   </div>
                 </Link>
