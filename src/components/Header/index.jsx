@@ -8,7 +8,6 @@ import { PiSirenThin } from "react-icons/pi";
 import { TbNotes } from "react-icons/tb";
 import { TiMessages } from "react-icons/ti";
 import { useMediaQuery } from "react-responsive";
-import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,127 +27,70 @@ const Header = () => {
     setSearchTerm(e.target.value);
   };
 
-
-    // const itemsLink = [
-  //   {
-  //     id: uuidv4(),
-  //     texto: "Página Inicial",
-  //     href: ""
-  //   },
-  //   {
-  //     id: uuidv4(),
-  //     texto: "HepatoHub",
-  //     href: "hepatohub"
-  //   },
-  //   {
-  //     id: uuidv4(),
-  //     texto: "Auto Cuidado",
-  //     href: "autocuidado"
-  //   },
-  //   {
-  //     id: uuidv4(),
-  //     texto: "Medicamentos",
-  //     href: "construcao"
-  //   },
-  //   {
-  //     id: uuidv4(),
-  //     texto: "Alimentação",
-  //     href: "construcao"
-  //   },
-  //   {
-  //     id: uuidv4(),
-  //     texto: "Conheça a Equipe",
-  //     href: "construcao"
-  //   },
-  //   {
-  //     id: uuidv4(),
-  //     texto: "Fórum",
-  //     href: "construcao"
-  //   }
-  // ]
-  
-  // { itemsLink && itemsLink.map(item => 
-  //   item.href !== undefined ? (
-  //     <Link href={{
-  //       pathname: `/${item.href}`
-  //     }} key={item.id}>
-  //       <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-  //         {item.texto}
-  //       </p>
-  //     </Link>)
-  //   : null
-  // )}
-
   return (
-    <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
-      <div className="w-full flex justify-between items-center px-4 md:px-8 lg:px-16">
-        <div className="flex-shrink-0">
-          <Image
-            src="/logoHeader.png"
-            alt="Logo"
-            width={99}
-            height={76}
-            priority={true}
-          />
-        </div>
-        <nav
-          className={`${
-            isMobile ? "hidden" : "flex"
-          } flex-grow justify-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 2xl:space-x-12 items-center`}
-        >
-          <Link href="/">
-            <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-              Página Inicial
-            </p>
-          </Link>
-          <Link href="/hepatohub">
-            <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-              Sobre
-            </p>
-          </Link>
-          <Link href="/autocuidado">
-            <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-              Auto Cuidado
-            </p>
-          </Link>
-          <Link href="/construcao">
-            <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-              Medicamentos
-            </p>
-          </Link>
-          <Link href="/construcao">
-            <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-              Conheça a Equipe
-            </p>
-          </Link>
-          <Link href="/construcao">
-            <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-              Colabore
-            </p>
-          </Link>
-        </nav>
-        <div className="ml-auto flex-shrink-0 relative">
-          <div className="hidden md:flex items-center">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Pesquisar..."
-                value={searchTerm}
-                onChange={handleChange}
-                className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-[256px]"
+    <div>
+      {!isMobile && (
+        <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
+          <div className="w-full flex justify-between items-center px-4 md:px-8 lg:px-16">
+            <div className="flex-shrink-0">
+              <Image
+                src="/logoHeader.png"
+                alt="Logo"
+                width={99}
+                height={76}
+                priority={true}
               />
-              <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
-                <div className="">
+            </div>
+            <nav className="flex-grow justify-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 2xl:space-x-12 items-center hidden md:flex">
+              <Link href="/">
+                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+                  Página Inicial
+                </p>
+              </Link>
+              <Link href="/hepatohub">
+                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+                  Sobre
+                </p>
+              </Link>
+              <Link href="/autocuidado">
+                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+                  Auto Cuidado
+                </p>
+              </Link>
+              <Link href="/construcao">
+                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+                  Medicamentos
+                </p>
+              </Link>
+              <Link href="/construcao">
+                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+                  Conheça a Equipe
+                </p>
+              </Link>
+              <Link href="/construcao">
+                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+                  Colabore
+                </p>
+              </Link>
+            </nav>
+            <div className="ml-auto flex-shrink-0 relative hidden md:flex items-center">
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  placeholder="Pesquisar..."
+                  value={searchTerm}
+                  onChange={handleChange}
+                  className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-[256px]"
+                />
+                <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
                   <button type="submit" className="bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]">
-                    {/* <Image
+                    <Image
                       src="/lupa.png"
                       alt="Ícone de busca"
-                      width={20}
-                      height={20}
+                      width={24}
+                      height={24}
                       priority={true}
-                      className="rounded-full flex justify-center items-center"
-                    /> */}
-                    <FaSearch size={14} color="white"/>
+                    />
                   </button>
                 </div>
               </form>
