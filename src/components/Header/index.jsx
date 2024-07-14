@@ -29,83 +29,8 @@ const Header = () => {
 
   return (
     <div>
-      {!isMobile && (
-        <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
-          <div className="w-full flex justify-between items-center px-4 md:px-8 lg:px-16">
-            <div className="flex-shrink-0">
-              <Image
-                src="/logoHeader.png"
-                alt="Logo"
-                width={99}
-                height={76}
-                priority={true}
-              />
-            </div>
-            <nav className="flex-grow justify-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 2xl:space-x-12 items-center hidden md:flex">
-              <Link href="/">
-                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-                  Página Inicial
-                </p>
-              </Link>
-              <Link href="/hepatohub">
-                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-                  Sobre
-                </p>
-              </Link>
-              <Link href="/autocuidado">
-                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-                  Auto Cuidado
-                </p>
-              </Link>
-              <Link href="/construcao">
-                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-                  Medicamentos
-                </p>
-              </Link>
-              <Link href="/construcao">
-                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-                  Conheça a Equipe
-                </p>
-              </Link>
-              <Link href="/construcao">
-                <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
-                  Colabore
-                </p>
-              </Link>
-            </nav>
-            <div className="ml-auto flex-shrink-0 relative hidden md:flex items-center">
-              <form onSubmit={handleSearch} className="relative">
-                <input
-                  type="text"
-                  placeholder="Pesquisar..."
-                  value={searchTerm}
-                  onChange={handleChange}
-                  className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-[256px]"
-                />
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
-                  <button type="submit" className="bg-footer rounded-full flex justify-center items-center w-[22px] h-[23px]">
-                    <Image
-                      src="/lupa.png"
-                      alt="Ícone de busca"
-                      width={24}
-                      height={24}
-                      priority={true}
-                    />
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div className="md:hidden flex items-center">
-              <button onClick={toggleMenu} className="text-white focus:outline-none">
-                <AiOutlineMenu size={24} />
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
       {isMobile && (
-        <div className="bg-gradient-to-b from-[#0D3855] to-[#0D3A56] h-24 flex items-center relative px-4">
+        <div className="bg-gradient-to-b from-[#0D3855] to-[#0D3A56] h-16 flex items-center relative px-4">
           <div className="flex items-center justify-between w-full">
             <div className="absolute top-0 left-0 w-36 h-full opacity-15 pointer-events-none">
               <Image
@@ -136,7 +61,7 @@ const Header = () => {
           </div>
           {isMenuOpen && (
             <div className="fixed top-0 left-0 w-full h-full z-50">
-              <div className="bg-gradient-to-b from-[#0D3855] to-[#0D3A56] h-24 flex items-center justify-between px-4 relative">
+              <div className="bg-gradient-to-b from-[#0D3855] to-[#0D3A56] h-16 flex items-center justify-between px-4 relative">
                 <div className="absolute top-0 left-0 w-36 h-full opacity-15 pointer-events-none">
                   <Image
                     src="/bgHeaderMobile.png"
