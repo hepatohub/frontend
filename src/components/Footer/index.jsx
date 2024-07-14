@@ -1,14 +1,15 @@
-"use client"
-import React, { useState } from "react";
-import { FaWhatsapp, FaPhone } from "react-icons/fa";
+"use client";
+import {useState} from "react";
 import {
-  AiOutlineMail,
-  AiFillLinkedin,
-  AiFillInstagram,
   AiFillFacebook,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiOutlineMail,
+  AiOutlineWhatsApp
 } from "react-icons/ai";
-import ButtonAction from "../ButtonAction";
 import Button from "../Button";
+import logo from "../../../public/logo.png";
+import Image from "next/image";
 
 const getYear = () => {
   return new Date().getFullYear();
@@ -28,7 +29,7 @@ const Footer = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const {name, value} = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
@@ -94,10 +95,24 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-bgFooter bg-no-repeat bg-cover bg-footer text-white py-12 text-shadow font-vietnam">
-      <div className="container mx-auto flex flex-wrap justify-around">
+    <footer className="bg-bgFooter bg-no-repeat bg-cover bg-footer text-white py-12 text-shadow font-vietnam px-6">
+      <div className="lg:hidden flex justify-between items-center gap-6 mb-6">
+        <div className="bg-white rounded-full flex items-center justify-center ">
+          <Image
+            src={logo}
+            alt="Imagem da logo do HepatoHub"
+            width={63}
+            height={49}
+          />
+        </div>
+        <p>
+          &copy; 2024 Projeto de Gestão de Saúde Hepática. Todos os direitos
+          reservados
+        </p>
+      </div>
+      <div className="container lg:mx-auto flex flex-wrap justify-around sm:flex-col lg:flex-row sm:items-start sm:mx-0">
         {/* Categoria */}
-        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
+        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4 lg:block sm:hidden">
           <h2 className="text-lg font-bold mb-12">CATEGORIAS</h2>
           <ul className="flex flex-col gap-5">
             <li>
@@ -141,6 +156,28 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* SOCIAL MOBILE */}
+        <div className="w-full lg:hidden sm:block">
+          <h2 className="text-lg font-bold border-b-4 border-b-white pb-1 mb-4">Social</h2>
+          <div className="flex items-center justify-between">
+            <a href="#" className="mr-4 hover:text-gray-400">
+              <AiFillLinkedin size={50} />
+            </a>
+
+            <a href="#" className="mr-4 hover:text-gray-400">
+              <AiFillInstagram size={50} />
+            </a>
+
+            <a href="#" className="hover:text-gray-400">
+              <AiFillFacebook size={50} />
+            </a>
+
+            <a href="#" className="hover:text-gray-400">
+              <AiOutlineWhatsApp size={50}/>
+            </a>
+          </div>
+        </div>
+
         {/* Atendimento */}
         <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
           <h2 className="text-lg font-bold mb-12">ATENDIMENTO</h2>
@@ -158,8 +195,10 @@ const Footer = () => {
         </div>
 
         {/* Social */}
-        <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4 flex justify-start
-        items-center flex-col">
+        <div
+          className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4 flex justify-start
+        items-center flex-col lg:block sm:hidden"
+        >
           <h2 className="text-lg font-bold mb-12">SOCIAL</h2>
           <div className="flex items-center">
             <a href="#" className="mr-4 hover:text-gray-400">
@@ -177,7 +216,11 @@ const Footer = () => {
         {/* Formulário */}
         <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 mb-8 px-4">
           <h2 className="text-lg font-bold mb-12">FORMULÁRIO</h2>
-          <form action="https://formspree.io/f/xeqybjgz" method="POST" className="flex flex-col gap-4">
+          <form
+            action="https://formspree.io/f/xeqybjgz"
+            method="POST"
+            className="flex flex-col gap-4"
+          >
             <div className="mb-4">
               <label htmlFor="nome" className="block text-sm font-bold mb-1">
                 Nome

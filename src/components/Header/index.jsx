@@ -68,7 +68,7 @@ const Header = () => {
   //     <Link href={{
   //       pathname: `/${item.href}`
   //     }} key={item.id}>
-  //       <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow font-be-vietnam text-15px font-500">
+  //       <p className="text-white hover:text-gray-200 px-2 md:px-4 py-2 cursor-pointer text-shadow    font-be-vietnam text-15px font-500">
   //         {item.texto}
   //       </p>
   //     </Link>)
