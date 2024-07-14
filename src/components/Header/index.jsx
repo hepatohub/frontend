@@ -29,9 +29,8 @@ const Header = () => {
 
   return (
     <div>
-      {!isMobile && (
-        <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
-          <div className="w-full flex justify-between items-center px-4 md:px-8 lg:px-16">
+        <div className="bg-bgHeader hidden bg-footer bg-cover h-20 md:flex items-center relative">
+          <div className="w-full hidden md:flex justify-between items-center px-4 md:px-8 lg:px-16">
             <div className="flex-shrink-0">
               <Image
                 src="/logoHeader.png"
@@ -102,10 +101,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-      )}
-
       {isMobile && (
-        <div className="bg-gradient-to-b from-[#0D3855] to-[#0D3A56] h-24 flex items-center relative px-4">
+        <div className="bg-gradient-to-b from-[#0D3855] to-[#0D3A56] h-16 flex items-center relative px-4">
           <div className="flex items-center justify-between w-full">
             <div className="absolute top-0 left-0 w-36 h-full opacity-15 pointer-events-none">
               <Image
