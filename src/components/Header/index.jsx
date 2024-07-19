@@ -29,6 +29,11 @@ const Header = () => {
 
   return (
     <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
+      <nav>
+        <Link href={"/construcao"}>
+          <h4>Construção</h4>
+        </Link>
+      </nav>
       {isMobile && isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-h1-color bg-cover mt-2 px-4 space-y-2 z-50">
           <Link href="/">
