@@ -78,14 +78,16 @@ const Header = () => {
   return (
     <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
       <div className="w-full flex justify-between items-center px-4 md:px-8 lg:px-16">
-        <div className="flex-shrink-0">
-          <Image
-            src="/logoHeader.png"
-            alt="Logo"
-            width={99}
-            height={76}
-            priority={true}
-          />
+        <div className="flex-shrink-0 cursor-pointer">
+          <Link href={"/"}>
+            <Image
+              src="/logoHeader.png"
+              alt="Logo"
+              width={99}
+              height={76}
+              priority={true}
+            />
+          </Link>
         </div>
         <nav
           className={`${
