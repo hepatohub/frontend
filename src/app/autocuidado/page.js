@@ -9,9 +9,9 @@ const page = () => {
     <>
       <section className='bg-bgauto bg-no-repeat bg-cover w-full h-[963px]'>
         <div className='flex flex-row items-end justify-end w-full pt-4 pr-6'>
-            <Button text="Entrar" />
+            <Button text="Entrar" href={"login"}/>
             <div className="ml-4"></div> {/* Adicionando margem entre os botões */}
-            <Button text="Cadastrar" />
+            <Button text="Cadastrar" href={"login"}/>
         </div>
         <Image src="/logo.png" alt='logo Hepato Hub' width={457} height={457} className='pt-[60px]'/>
       </section>
