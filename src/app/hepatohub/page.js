@@ -1,16 +1,15 @@
-"use client";
-import Button from '@/components/Button'
+"use client"
+import Button from '@/components/Button';
 import Image from "next/image";
-import React from 'react'
 
 const hepatohub = () => {
   return (
-    <div>
+    <>
       <section className='bg-bgHepatohub bg-no-repeat bg-cover h-[698px] relative -mt-1'>
         <div className='flex flex-row items-end justify-end w-full pt-4 pr-6'>
-          <Button text="Entrar" />
-          <div className="ml-4"></div> {/* Adicionando margem entre os botões */}
-          <Button text="Cadastrar" />
+          <Button text="Entrar" href={"/login"}/>
+          <div className="ml-4"></div>
+          <Button text="Cadastrar"  href={"/login"}/>
         </div>
         <h2 className='text-hepato-blue text-2xl w-[528px] absolute bottom-0 left-0 right-0 ml-auto mr-6 mb-8 text-right'>Juntos pela saúde do fígado <br/> Seu hub de informação e apoio.</h2>
       </section>
@@ -99,7 +98,7 @@ const hepatohub = () => {
       </div>
       
       </main>
-    </div>
+    </>
   )
 }
 
