@@ -6,10 +6,7 @@ import Link from "next/link";
 const construcao = () => {
   return (
   <div className="
-    bg-hepato-blue flex items-center justify-center h-[100vh]
-    sm:max-w-full
-    lg:w-full "
-  >
+    bg-hepato-blue flex items-center justify-center h-[100vh] sm:max-w-full z-30 lg:w-full">
     <div className="
       bg-construcao h-[921px] flex flex-col justify-center items-center
       sm:max-w-full
