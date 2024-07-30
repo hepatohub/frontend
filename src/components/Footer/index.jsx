@@ -95,7 +95,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-bgFooter bg-no-repeat bg-cover bg-footer text-white py-12 text-shadow font-vietnam px-6">
+    <footer className="bg-bgFooter bg-no-repeat bg-cover bg-footer text-white py-12 text-shadow font-vietnam px-6 z-50 relative">
       <div className="lg:hidden flex justify-between items-center gap-6 mb-6">
         <div className="bg-white rounded-full flex items-center justify-center ">
           <Image

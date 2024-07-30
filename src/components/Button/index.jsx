@@ -9,7 +9,7 @@ const Button = ({href, children, text, widthPrimario = true, rounded = true}) =>
   return (
     <Link href={href}>
       <button className={`
-        h-[26px] cursor-pointer py-2 px-4 text-white flex items-center justify-center bg-red-400
+        h-[35px] cursor-pointer py-2 px-4 text-white flex items-center justify-center bg-red-400 font-be-vietnam
         ${widthPrimario ? "w-[185px]" : "w-[90px]"}
         ${rounded ? "rounded-[64px]" : "rounded-none"}
       `} style={buttonStyle}>
