@@ -89,7 +89,7 @@ const Header = () => {
                 placeholder="Pesquisar..."
                 value={searchTerm}
                 onChange={handleChange}
-                className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-[256px]"
+                className="bg-white text-gray-800 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-[256px] font-be-vietnam font-500 text-xs"
               />
               <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
                 <div className="">
