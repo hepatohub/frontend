@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-bgHeader bg-footer bg-cover h-24 flex items-center relative">
+    <div className="bg-bgHeader bg-footer bg-cover flex items-center relative font-be-vietnam h-[95px]">
         <div className="w-full flex justify-between items-center px-4 md:px-8 lg:px-16">
         <Link href="/" className="flex-shrink-0">
           <Image
