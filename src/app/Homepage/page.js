@@ -71,10 +71,10 @@ const Homepage = () => {
           </div>
         </section>
         
-        <main className="bg-bgSecCards bg-no-repeat bg-cover py-10 justify-around flex">
+        <main className="bg-bgSecCards bg-no-repeat bg-white h-[616px] bg-cover items-center justify-around flex">
           <div className="xl:container flex-wrap flex justify-around">
             {cardsData.map((card) => (
-              <div key={card.id} className="mb-8">
+              <div key={card.id}>
                 <Cards
                   imageUrl={card.imageUrl}
                   title={card.title}
