@@ -1,10 +1,13 @@
 "use client";
-import React, { useState } from "react";
 import Button from '@/components/Button';
 import LoginForm from "@/components/LoginForm";
+import Link from 'next/link';
+import { useSearchParams } from "next/navigation";
 
-const Login = () => {
-  const [activeTab, setActiveTab] = useState("Entrar");
+const Entrar = () => {
+  const searchParams = useSearchParams();
+  const param = searchParams.get("acao");
+  console.log(param)
 
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-bgLogin bg-no-repeat bg-cover bg-footer relative w-full">
@@ -18,25 +21,25 @@ const Login = () => {
         lg:w-[873px] lg:pt-20 lg:pl-10">
         <div className="max-w-sm w-[300px] h-[675px] shadow-none shadow-right border-l-0 overflow-hidden ">
           <div className="flex justify-between">
-            <button
+            <Link
               className={`p-4 w-[50%] text-center ${
-                activeTab === "Entrar" ? "bg-button-login rounded-full text-cards" : "bg-cards rounded-full"
+                param === "entrar" ? "bg-button-login rounded-full text-cards" : "bg-cards rounded-full"
               }`}
-              onClick={() => setActiveTab("Entrar")}
+              href={"/minha-conta?acao=entrar"}
             >
               Entrar
-            </button>
-            <button
+            </Link>
+            <Link
               className={`p-4 w-[50%] text-center ml-[-4px] ${
-                activeTab === "Cadastrar" ? " bg-button-login text-cards rounded-full " : "bg-cards text-button-login rounded-full "
+                param === "cadastrar" ? " bg-button-login text-cards rounded-full " : "bg-cards text-button-login rounded-full "
               }`}
-              onClick={() => setActiveTab("Cadastrar")}
+              href={"/minha-conta?acao=cadastrar"}
             >
               Cadastrar
-            </button>
+            </Link>
           </div>
           <div className="pt-10">
-            {activeTab === "Entrar" ? (
+            {param === "entrar" ? (
               <LoginForm mode="login" />
             ) : (
               <LoginForm mode="register" />
@@ -48,4 +51,4 @@ const Login = () => {
   );
 }
 
-export default Login;
+export default Entrar;

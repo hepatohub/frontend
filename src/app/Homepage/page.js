@@ -33,8 +33,8 @@ const Homepage = () => {
         
         <section className="bg-bg-homepage w-full h-700 flex-col items-center bg-white hidden md:flex">
           <div className="flex items-center justify-end w-full p-3 gap-5">
-            <Button text="Entrar" href="/login" />
-            <Button text="Cadastrar" href="/login" />
+            <Button text="Entrar" href="/minha-conta?acao=entrar" />
+            <Button text="Cadastrar" href="/minha-conta?acao=cadastrar" />
           </div>
         </section>
         
