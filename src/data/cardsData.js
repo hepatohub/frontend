@@ -21,7 +21,7 @@ const cardsData = [
     id: 4,
     imageUrl: '/alimentacao.png',
     title: 'ALIMENTAÇÃO',
-    description: 'Comunidade online para compartilhar experiências, obter apoio e aprender com outros pacientes e profissionais da saúde.',
+    description: 'Dicas e orientações sobre alimentação saudável para promover uma função hepática ótima e melhorar sua saúde geral.',
   },
 ];
 
