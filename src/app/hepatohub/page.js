@@ -1,10 +1,13 @@
 "use client"
 import Button from '@/components/Button';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import Image from "next/image";
 
 const hepatohub = () => {
   return (
     <>
+    <Header/>
       <section className='bg-bgHepatohub bg-no-repeat bg-cover h-[698px] relative -mt-1'>
         <div className='flex flex-row items-end justify-end w-full pt-4 pr-6'>
           <Button text="Entrar" href={"/login"}/>
@@ -98,6 +101,7 @@ const hepatohub = () => {
       </div>
       
       </main>
+      <Footer/>
     </>
   )
 }

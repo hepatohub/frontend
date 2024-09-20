@@ -1,6 +1,8 @@
 "use client";
 import Button from '@/components/Button';
 import Cards from '@/components/Cards';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import cardsData from '@/data/cardsData';
 import Image from "next/image";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -8,6 +10,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 const Homepage = () => {
   return (
     <>
+    <Header/>
       <div className='bg-bg-homepage bg-bgHome bg-no-repeat bg-cover'>
         <section className="bg-[#0C3853] w-full h-screen flex flex-col items-center lg:hidden md:hidden relative">
           <div className="relative w-full flex h-80 items-end">
@@ -85,6 +88,7 @@ const Homepage = () => {
           </div>
         </main>
       </div>
+      <Footer/>
     </>
   );
 };

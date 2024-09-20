@@ -1,12 +1,12 @@
-import Footer from '@/components/Footer';
-import Header from '@/components/Header'
 import Button from '@/components/Button';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import Image from "next/image";
-import React from 'react'
 
 const page = () => {
   return (
     <>
+    <Header/>
       <section className='bg-bgauto bg-no-repeat bg-cover w-full h-[963px]'>
         <div className='flex flex-row items-end justify-end w-full pt-4 pr-6'>
             <Button text="Entrar" href={"login"}/>
@@ -122,6 +122,7 @@ const page = () => {
 
         </section>
       </main>
+      <Footer/>
     </> 
   )
 }
